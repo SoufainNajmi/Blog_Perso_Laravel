@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
+    public function create(Article $article)
+    {
+        return view('comments.create', compact('article'));
+    }
     public function store(Request $request, Article $article)
 {
     $request->validate([
