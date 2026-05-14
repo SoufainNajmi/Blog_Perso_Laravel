@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;// Permet de gérer les requêtes HTTP
 use App\Models\Article;
 
 class ArticleController extends Controller
 {
     //  public function index()
-   public function index()// Affiche la liste des articles
+  public function index()
+{
+    $articles = Article::latest()->paginate(10);
+    return view('articles.index', compact('articles'));
+}
+   public function show(Article $article) // Affiche un article spécifique
     {
-        $articles = Article::all(); // Récupère tous les articles de la base de données
-        return view('articles.index', compact('articles'));// Affiche la vue avec les articles
+        return view('articles.show', compact('article')); // Affiche la vue avec l'article
     }
 
     public function create()
