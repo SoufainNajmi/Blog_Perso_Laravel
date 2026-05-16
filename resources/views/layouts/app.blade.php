@@ -14,17 +14,15 @@
     </style>
 </head>
 <body>
-
-    <nav>
-        <a href="{{ route('home') }}">Accueil</a>
-        <a href="{{ route('about') }}">À propos</a>
-    </nav>
+      @include('partials.header')
+      @include('partials.navbar')
 
     <main>
         @yield('content')
     </main>
+    @include('partials.about')
 
-    {{-- Inclusion du footer --}}
+
     @include('partials.footer')
 
 </body>
