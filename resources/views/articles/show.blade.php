@@ -1,5 +1,5 @@
 {{-- resources/views/posts/show.blade.php --}}
-@extends('layouts.app')
+@extends('home')
 
 @section('title', $article->title)
 
@@ -10,7 +10,7 @@
         <div class="meta">
             Publié le {{ $article->created_at->format('d/m/Y à H:i') }}
             @if($article->updated_at != $article->created_at)
-                – Mis à jour le {{ $article->updated_at->format('d/m/Y') }}
+                Mis à jour le {{ $article->updated_at->format('d/m/Y') }}
             @endif
         </div>
 

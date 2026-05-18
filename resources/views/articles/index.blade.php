@@ -1,10 +1,10 @@
-{{-- resources/views/posts/index.blade.php --}}
-@extends('layouts.app')
+
+@extends('home')
 
 @section('title', 'Accueil Tous les articles')
 
 @section('content')
-    <h1>Bienvenue sur mon blog</h1>
+    <h1>les articles de blog perso </h1>
 
     @if($articles->isEmpty())
         <p>Aucun article pour le moment.</p>

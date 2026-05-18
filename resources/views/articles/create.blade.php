@@ -35,7 +35,9 @@
 
     <h1>Créer un article</h1>
 
-    <form action="{{ route('articles.store') }}" method="POST">
+    <form  method="POST" action="{{ route('articles.store') }}" >// Formulaire pour créer un nouvel article
+
+
 
         @csrf // Protection contre les attaques CSRF
 
