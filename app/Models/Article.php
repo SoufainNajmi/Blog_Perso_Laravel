@@ -16,4 +16,7 @@ class Article extends Model
         'content',
         'author'
     ];
+
+    // Définir la relation avec les commentaires
+
 }
